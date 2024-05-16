@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
-function App() {
+const StopWatch = () => {
+  let [timePassedInMilliSeconds, setTimePassed] = useState(0);
+  let timer = null;
+  const start = () => {};
+  
+  const stop = () => {};
+  
+  const reset = () => {};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2 className="border px-3 py-4 rounded my-3 mx-auto text-center" style={{maxWidth: "300px"}}>
+        {Math.floor(timePassedInMilliSeconds / 1000)} s
+      </h2>
+      <div className="d-flex justify-content-center">
+        <button className="btn btn-outline-primary mr-2" onClick={start}>
+          start
+        </button>
+        <button className="btn btn-outline-danger mr-2" onClick={stop}>
+          stop
+        </button>
+        <button className="btn btn-outline-warning" onClick={reset}>
+          reset
+        </button>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default StopWatch;
