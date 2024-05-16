@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 
 const StopWatch = () => {
   let [timePassedInMilliSeconds, setTimePassed] = useState(0);
   let timer = null;
+
   const start = () => {};
   
   const stop = () => {};
   
   const reset = () => {};
+
   return (
     <div>
       <h2 className="border px-3 py-4 rounded my-3 mx-auto text-center" style={{maxWidth: "300px"}}>
